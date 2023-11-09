@@ -6,11 +6,10 @@ import { Hero } from './hero';
 import { HEROES } from './mock-heroes';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HeroService {
-
-  constructor(private messageService: MessageService) { }
+  constructor(private messageService: MessageService) {}
 
   getHeroes(): Observable<Hero[]> {
     const heroes = of(HEROES);
